@@ -209,7 +209,7 @@
                 <div class="col-span-3">
                     <a href="#" ><img src="../img/logo.png" alt="Bulldozen" class="h-8"></a>
                     <p class="my-4 text-xs leading-normal text-gray-500">
-                        Beautifully hand-crafted components to help you build amazing pages.
+                        (petite description)
                     </p>
                 </div>
                 <nav class="col-span-1 md:col-span-1 lg:col-span-2">
@@ -221,10 +221,6 @@
                 </nav>
                 <nav class="col-span-1 md:col-span-1 lg:col-span-2">
                     <p class="mb-3 text-xs font-semibold tracking-wider text-gray-400 uppercase">Suivez-nous</p>
-                    <a href="#" class="flex mb-3 text-sm font-medium text-gray-500 transition hover:text-gray-700 md:mb-2 hover:text-primary">Our Story</a>
-                    <a href="#" class="flex mb-3 text-sm font-medium text-gray-500 transition hover:text-gray-700 md:mb-2 hover:text-primary">Company</a>
-                    <a href="#" class="flex mb-3 text-sm font-medium text-gray-500 transition hover:text-gray-700 md:mb-2 hover:text-primary">Privacy</a>
-                    <a href="#" class="flex mb-3 text-sm font-medium text-gray-500 transition hover:text-gray-700 md:mb-2 hover:text-primary">Blog</a>
                 </nav>
 
                 <div class="col-span-3">
