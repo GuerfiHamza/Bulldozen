@@ -2,73 +2,34 @@
 
 @section('title', 'Accueil')
 @section('content')
-    <section class="px-2 py-32  md:px-0">
-        <div class="container items-center max-w-6xl px-8 mx-auto xl:px-5">
-            <div class="flex flex-wrap items-center sm:-mx-3">
-                <div class="w-full md:w-1/2 md:px-3">
-                    <div
-                        class="w-full pb-6 space-y-6 sm:max-w-md lg:max-w-lg md:space-y-4 lg:space-y-8 xl:space-y-9 sm:pr-5 lg:pr-0 md:pb-0">
-                        <h1
-                            class="text-4xl font-extrabold tracking-tight text-gray-900 sm:text-5xl md:text-4xl lg:text-5xl xl:text-6xl">
-                            <span class="block xl:inline">Beautiful Pages to</span>
-                            <span class="block text-yellow-600 xl:inline">Tell Your Story!</span>
-                        </h1>
-                        <p class="mx-auto text-base text-gray-500 sm:max-w-md lg:text-xl md:max-w-3xl">It's never been easier
-                            to build beautiful websites that convey your message and tell your story.</p>
-                        <div class="relative flex flex-col sm:flex-row sm:space-x-4">
-                            <a href="#_"
-                                class="flex items-center w-full px-6 py-3 mb-3 text-lg text-white bg-yellow-600 rounded-md sm:mb-0 transition-colors delay-150 duration-300 hover:bg-yellow-700 sm:w-auto">
-                                Try It Free
-                                <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 ml-1" viewBox="0 0 24 24"
-                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                    stroke-linejoin="round">
-                                    <line x1="5" y1="12" x2="19" y2="12"></line>
-                                    <polyline points="12 5 19 12 12 19"></polyline>
-                                </svg>
-                            </a>
-                            <a href="#_"
-                                class="flex items-center px-6 py-3 text-gray-500 bg-gray-100 rounded-md transition-colors delay-150 duration-300 hover:bg-gray-200 hover:text-gray-600">
-                                Learn More
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="w-full md:w-1/2">
-                    <div class="w-full h-auto overflow-hidden rounded-md shadow-xl sm:rounded-xl">
-                        <img src="/img/banner2.png">
-                    </div>
+    <section class="pb-8 bg-top bg-cover bg-no-repeat"
+        style="background-image: url('/img/background.png')">
+        <div class="container px-4">
+            <div class="py-32 px-20 ">
+                <div class="max-w-lg mt-10 mb-8">
+                    <h2 class="text-3xl md:text-4xl mb-4 text-white font-bold font-heading">
+                        PIÈCES DÉTACHÉES
+                        & SERVICES
+                        POUR ENGINS ROULANTS
+
+                    </h2>
                 </div>
             </div>
+
         </div>
+
     </section>
-    <section>
-        <div class="container mx-auto mb-5">
-            <h1 class="sm:text-3xl text-2xl font-medium title-font mb-2 text-gray-900">Nos Catégories</h1>
-            <div class="h-1 w-20 bg-yellow-500 rounded"></div>
-        </div>
-        <div class=" flex flex-wrap overflow-hidden">
-            <div class="owl-carousel container mx-auto overflow-hidden">
 
-                @foreach ($categories as $category)
-                    <div class="my-1 px-1 w-full overflow-hidden border-b-2 border-yellow-500">
-                        <a href="{{ route('products', ['category' => $category->slug]) }}" class=" overflow-hidden">
-                            <div class=" mx-auto overflow-hidden bg-gray-100 rounded-lg shadow-lg ">
-                                <img class="object-cover w-full h-56"
-                                    src=" {{ URL::asset('storage/' . $category->image) }} " alt="avatar">
+    <div class="flex container flex-wrap items-center justify-center max-w-4xl mx-auto pt-12 pb-4">
+        @foreach ($partenaires as $pr)
 
-                                <div class="py-5 text-center">
-                                    <p class="block text-2xl font-bold text-gray-800">{{ $category->name }}</p>
-                                    <span class="text-sm text-gray-700 ">{{ $category->description }}</span>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                @endforeach
-
-
+            <div class="w-1/2 md:w-1/3 lg:w-1/5 px-3 mb-8">
+                <img class="mx-auto" src="{{ URL::asset('storage/' . $pr->logo) }} " alt="">
             </div>
-        </div>
-    </section>
+        @endforeach
+
+    </div>
+  
     <section
         class="box-border relative overflow-hidden leading-7 text-gray-900 bg-white border-0 border-gray-200 border-solid">
         <div class="relative z-10 mx-auto max-w-7xl">
@@ -76,7 +37,7 @@
                 class="flex flex-col items-center justify-center w-full px-8 py-20 space-y-6 text-center border-solid md:w-2/3 lg:w-1/2 md:space-y-10 md:items-start md:py-48 md:text-left lg:py-56 xl:py-64 lg:pl-12 lg:pr-16 xl:pl-16 xl:pr-24">
                 <h1
                     class="w-full text-4xl font-extrabold leading-tight tracking-tight text-left text-black md:text-5xl lg:text-6xl xl:text-7xl">
-                   {{$banner->title}}
+                    {{ $banner->title }}
                 </h1>
                 <p class="text-xl leading-tight text-left text-gray-700 border-0 border-gray-200 w md:text-2xl">
                     {{ $banner->description }}
@@ -85,8 +46,7 @@
             </div>
         </div>
         <div class="absolute top-0 right-0 hidden w-1/3 h-full md:block lg:w-1/2">
-            <img class="object-cover w-full h-full"
-                src="/img/banner2.png">
+            <img class="object-cover w-full h-full" src="/img/banner2.png">
         </div>
     </section>
     <section>
