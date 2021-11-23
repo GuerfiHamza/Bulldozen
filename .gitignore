@@ -1,5 +1,5 @@
 /public/hot
-/public/storage
+# /public/storage
 /storage/*.key
 .env.backup
 .phpunit.result.cache
