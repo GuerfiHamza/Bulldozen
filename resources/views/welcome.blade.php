@@ -2,8 +2,9 @@
 
 @section('title', 'Accueil')
 @section('content')
-    <section class="pb-8 bg-top bg-cover bg-no-repeat"
-        style="background-image: url('/img/background.png')">
+    <section class="pb-8 bg-top bg-cover bg-no-repeat mix-blend-darken"
+        style="background-image:linear-gradient(rgba(0, 0, 0, 0.7), rgba(37, 37, 37, 0.7)), url('/img/background.png')">
+
         <div class="container px-4">
             <div class="py-32 px-20 ">
                 <div class="max-w-lg mt-10 mb-8">
@@ -20,116 +21,120 @@
 
     </section>
 
-    <div class="flex container flex-wrap items-center justify-center max-w-4xl mx-auto pt-12 pb-4">
-        @foreach ($partenaires as $pr)
+    <div class="flex  flex-wrap items-center justify-center max-w-4xl mx-auto pt-12 pb-4">
+        @foreach ($fournisseurs as $fr)
 
-            <div class="w-1/2 md:w-1/3 lg:w-1/5 px-3 mb-8">
-                <img class="mx-auto" src="{{ URL::asset('storage/' . $pr->logo) }} " alt="">
+            <div class="w-1/2 md:w-1/3 lg:w-1/6 mb-8">
+                <img class="mx-auto w-16" src="{{ URL::asset('storage/' . $fr->logo) }} " alt="{{ $fr->logo }}">
             </div>
         @endforeach
 
     </div>
-  
-    <section
-        class="box-border relative overflow-hidden leading-7 text-gray-900 bg-white border-0 border-gray-200 border-solid">
-        <div class="relative z-10 mx-auto max-w-7xl">
-            <div
-                class="flex flex-col items-center justify-center w-full px-8 py-20 space-y-6 text-center border-solid md:w-2/3 lg:w-1/2 md:space-y-10 md:items-start md:py-48 md:text-left lg:py-56 xl:py-64 lg:pl-12 lg:pr-16 xl:pl-16 xl:pr-24">
-                <h1
-                    class="w-full text-4xl font-extrabold leading-tight tracking-tight text-left text-black md:text-5xl lg:text-6xl xl:text-7xl">
-                    {{ $banner->title }}
-                </h1>
-                <p class="text-xl leading-tight text-left text-gray-700 border-0 border-gray-200 w md:text-2xl">
-                    {{ $banner->description }}
-                </p>
 
+    <section class="relative py-20">
+        <div class="container px-4 mx-auto">
+          <div class="relative flex flex-wrap items-center -mx-4">
+            <div class="w-full lg:w-1/2 px-4 mb-12 lg:mb-0">
+              <img class="h-96 lg:h-128 w-full rounded-xl object-cover" src="/img/background.png" alt="">
             </div>
-        </div>
-        <div class="absolute top-0 right-0 hidden w-1/3 h-full md:block lg:w-1/2">
-            <img class="object-cover w-full h-full" src="/img/banner2.png">
-        </div>
-    </section>
-    <section>
-        <div class="container mx-auto mb-5">
-            <h1 class="sm:text-3xl text-2xl font-medium title-font mb-2 text-gray-900">Nos Produits</h1>
-            <div class="h-1 w-20 bg-yellow-500 rounded"></div>
-        </div>
-        <div class=" flex flex-wrap overflow-hidden">
-            <div class="owl-carousel container mx-auto overflow-hidden">
-                @foreach ($products as $product)
-
-                    <div class="my-1 px-1 w-full overflow-hidden ">
-                        <a href="#" class=" overflow-hidden">
-                            <div class="bg-white shadow-md border border-gray-200 rounded-lg max-w-sm">
-                                <a href="{{ route('products.show', $product->slug) }}">
-                                    <img class="rounded-t-lg" src="{{ URL::asset('storage/' . $product->image) }}"
-                                        loading="lazy" />
-                                </a>
-                                <div class="p-5">
-                                    <a href="{{ route('products.show', $product->slug) }}">
-                                        <h5 class="text-gray-900 font-bold text-2xl tracking-tight mb-2">
-                                            {{ $product->name }}</h5>
-                                    </a>
-                                    <p class="font-normal text-gray-700 mb-3">{{ $product->details }}</p>
-                                    <a href="{{ route('products.show', $product->slug) }}"
-                                        class="transition-colors delay-150 duration-300 text-white bg-yellow-500 hover:bg-yellow-600 focus:ring-4 focus:ring-yellow-300 font-medium rounded-lg text-sm px-3 py-2 text-center inline-flex items-center">
-                                        Read more
-                                        <svg class="-mr-1 ml-2 h-4 w-4" fill="currentColor" viewBox="0 0 20 20"
-                                            xmlns="http://www.w3.org/2000/svg">
-                                            <path fill-rule="evenodd"
-                                                d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
-                                                clip-rule="evenodd"></path>
-                                        </svg>
-                                    </a>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                @endforeach
-
-
-
+            <div class="relative w-full lg:w-1/2 px-4">
+              <div class="relative lg:pl-10 max-w-lg">
+                <h2 class="mt-8 mb-6 lg:mb-10 lg:pr-8 text-4xl font-semibold font-heading">BULLDOZEN vous propose un large choix de pièces de rechange</h2>
+                <p class="mb-6 lg:mb-12 text-xl text-gray-500">Quel que soit la marque de votre ; Pelle, Bulldozer, niveleuse, Chargeur, Mini-Pelle, Chariot de forage, Trancheuse, Finisseur, Compacteur, Foreuse…. la société BULLDOZEN vous propose un large choix de pièces de rechange, Une gamme très étendue, des stocks très importants, et un service Multimarques rapide dédiés à vos besoins.</p>
+                <a class="text-xl text-yellow-500 underline hover:no-underline font-medium" href="{{ route('apropos') }}">En Savoir plus</a>
+              </div>
             </div>
+          </div>
         </div>
-        <div class="container mx-auto flex flex-col justify-center items-center mt-3">
-            <a href="{{ route('products') }}"
-                class="transition-colors delay-150 duration-300 text-white bg-yellow-500 hover:bg-yellow-600 focus:ring-4 focus:ring-yellow-300 font-medium rounded-lg text-sm px-6 py-4 text-center inline-flex ">
-                Voir plus
-                <svg class="-mr-1 ml-2 h-4 w-4" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                    <path fill-rule="evenodd"
-                        d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
-                        clip-rule="evenodd"></path>
-                </svg>
-            </a>
-        </div>
-    </section>
+      </section>
+      <section class="py-20">
+        <div class="container px-4 mx-auto">
+            <h1 class="sm:text-3xl text-2xl font-medium title-font mb-2 text-gray-900">Nos Categories</h1>
+            <div class="h-1 w-20 bg-yellow-500 rounded mb-5"></div>
+            <div class="flex flex-wrap -mx-3 overflow-hidden sm:-mx-3 md:-mx-4 lg:-mx-4 xl:-mx-1">
+                @foreach ($categories as $cat )
+                <div class="my-3 px-3 w-full overflow-hidden sm:my-3 sm:px-3 md:my-4 md:px-4 lg:my-4 lg:px-4 lg:w-1/3 xl:my-1 xl:px-1 xl:w-1/3">
 
-
-    <section class="py-20 mt-10">
-        <div class="container mx-auto px-4">
-            <h2 class="mb-10 text-center text-sm font-bold font-heading text-gray-400">Découvrez ceux qui nous font
-                confiance !</h2>
-            <div class="flex flex-wrap items-center">
-                <div class="w-full md:w-1/12 px-4 mb-10 md:mb-0">
-
+         <div class="bg-white shadow-md  rounded-3xl p-4 m-2">
+            <div class="flex-none lg:flex">
+                <div class=" h-full w-full lg:h-48 lg:w-48   lg:mb-0 mb-3">
+                    <img src="{{ URL::asset('storage/' . $cat->image) }}"
+                        alt="{{ $cat->name }}" class=" w-full  object-scale-down lg:object-contain  lg:h-48 rounded-2xl">
                 </div>
-                <div class="w-full md:w-10/12 px-4 -mb-6">
-                    <div class="flex flex-wrap -mx-4 owl-carousel">
-                        @foreach ($partenaires as $pr)
+                <div class="flex-auto ml-3 justify-evenly py-2">
+                    <div class="flex flex-wrap ">
 
-                            <div class="w-full sm:w-1/2 md:w-1/3 xl:w-1/6 px-2 mb-6">
-                                <div class="flex mx-auto h-40 w-40 px-2 items-center justify-center rounded-full bg-white">
-                                    <img class="mx-auto" src="{{ URL::asset('storage/' . $pr->logo) }}"
-                                        alt="{{ $pr->name }}">
-                                </div>
-                            </div>
-                        @endforeach
+                        <h2 class="flex-auto text-lg font-medium">{{ Str::limit($cat->name, 30, '...') }}</h2>
+                    </div>
+                    <p class="mt-12"></p>
+                    <p class="text-gray-500 text-sm">{{ Str::limit($cat->description, 20, '...') }}</p>
+                    <div class="flex p-4 pb-2 border-t border-gray-200 "></div>
+                    <div class="flex space-x-3 text-sm font-medium justify-end">
 
+                        <a href="{{ route('products', ['category' => $cat->slug]) }}"
+                            class="mb-2 md:mb-0 bg-yellow-600 px-5 py-2 shadow-sm tracking-wider text-white rounded-full hover:bg-yellow-700"
+                            type="button" aria-label="like">Visiter</a>
                     </div>
                 </div>
-
             </div>
         </div>
+                </div>
+            @endforeach
+
+          </div>
+          <div class="text-center"><a class="inline-block py-4 px-8 text-xs text-white font-semibold leading-none bg-yellow-600 hover:bg-yellow-700 rounded" href="{{ route('products') }}">Tout nos categories</a></div>
+        </div>
+      </section>
+      <section class="py-20">
+        <div class="container px-4 mx-auto">
+            <h1 class="sm:text-3xl text-2xl font-medium title-font mb-2 text-gray-900">Nos Categories</h1>
+            <div class="h-1 w-20 bg-yellow-500 rounded mb-5"></div>
+            <div class="flex flex-wrap -mx-3 overflow-hidden sm:-mx-3 md:-mx-4 lg:-mx-4 xl:-mx-1">
+                @foreach ($products as $pr )
+                <div class="my-3 px-3 w-full overflow-hidden sm:my-3 sm:px-3 md:my-4 md:px-4 lg:my-4 lg:px-4 lg:w-1/3 xl:my-1 xl:px-1 xl:w-1/3">
+
+         <div class="bg-white shadow-md  rounded-3xl p-4 m-2">
+            <div class="flex-none lg:flex">
+                <div class=" h-full w-full lg:h-48 lg:w-48   lg:mb-0 mb-3">
+                    <img src="{{ URL::asset('storage/' . $pr->image) }}"
+                        alt="{{ $pr->name }}" class=" w-full  object-scale-down lg:object-cover  lg:h-48 rounded-2xl">
+                </div>
+                <div class="flex-auto ml-3 justify-evenly py-2">
+                    <div class="flex flex-wrap ">
+
+                        <h2 class="flex-auto text-lg font-medium">{{ Str::limit($pr->name, 30, '...') }}</h2>
+                    </div>
+                    <p class="mt-12"></p>
+                    <p class="text-gray-500 text-sm">{{ Str::limit($pr->description, 20, '...') }}</p>
+                    <div class="flex p-4 pb-2 border-t border-gray-200 "></div>
+                    <div class="flex space-x-3 text-sm font-medium justify-end">
+
+                        <a href="{{ route('products.show', $pr->slug) }}"
+                            class="mb-2 md:mb-0 bg-yellow-600 px-5 py-2 shadow-sm tracking-wider text-white rounded-full hover:bg-yellow-700"
+                            type="button" aria-label="like">Visiter</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+                </div>
+            @endforeach
+
+          </div>
+          <div class="text-center"><a class="inline-block py-4 px-8 text-xs text-white font-semibold leading-none bg-yellow-600 hover:bg-yellow-700 rounded" href="{{ route('products') }}">Tout nos produits</a></div>
+        </div>
+      </section>
+
+    <section class="py-10">
+        <div class="flex  flex-wrap items-center justify-center max-w-4xl mx-auto pt-12 pb-4">
+            @foreach ($fournisseurs2 as $fr)
+
+                <div class="w-1/2 md:w-1/3 lg:w-1/6 mb-8">
+                    <img class="mx-auto w-16" src="{{ URL::asset('storage/' . $fr->logo) }} " alt="{{ $fr->logo }}">
+                </div>
+            @endforeach
+
+        </div>
+
     </section>
 @section('scripts')
     <script>

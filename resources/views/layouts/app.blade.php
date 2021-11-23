@@ -52,11 +52,11 @@
                                     </li>
                                     <li class="flex xl:hidden cursor-pointer text-gray-600  leading-3 tracking-normal py-2 hover:text-yellow-700 flex items-center focus:text-yellow-700 focus:outline-none">
 
-                                        <span class="ml-2 font-bold">Partenaires</span>
+                                        <span class="ml-2 font-bold">A propos</span>
                                     </li>
                                     <li class="border-b border-gray-300 flex xl:hidden cursor-pointer text-gray-600  leading-3 tracking-normal pt-2 pb-4 hover:text-yellow-700 flex items-center focus:text-yellow-700 focus:outline-none">
 
-                                        <span class="ml-2 font-bold">Devis</span>
+                                        <span class="ml-2 font-bold">Contact</span>
                                     </li>
 
                                 </ul>
@@ -85,17 +85,17 @@
                             <a href="{{ route('index') }}" class="@if(Request::is('/')) nav-active @endif focus:text-yellow-700 border-b-2 border-transparent focus:border-yellow-700 flex px-5 items-center py-6  leading-5 text-gray-700 hover:bg-gray-100 focus:bg-gray-100 focus:outline-none transition duration-150 ease-in-out">
                                 Accueil
                             </a>
-                            <a href="{{ route('products') }}" class="@if(Request::is('produits')) nav-active @endif focus:text-yellow-700 border-b-2 border-transparent focus:border-yellow-700 flex px-5 items-center py-6  leading-5 text-gray-700 hover:bg-gray-100 focus:bg-gray-100 focus:outline-none transition duration-150 ease-in-out">
+                            <a href="{{ route('products') }}" class="@if(Request::is('produits/*', 'produits')) nav-active @endif focus:text-yellow-700 border-b-2 border-transparent focus:border-yellow-700 flex px-5 items-center py-6  leading-5 text-gray-700 hover:bg-gray-100 focus:bg-gray-100 focus:outline-none transition duration-150 ease-in-out">
 
                                 Produits
                             </a>
-                            <a href="{{ route('partenaires') }}" class="@if(Request::is('partenaires')) nav-active @endif focus:text-yellow-700 border-b-2 border-transparent focus:border-yellow-700 flex px-5 items-center py-6  leading-5 text-gray-700 hover:bg-gray-100 focus:bg-gray-100 focus:outline-none transition duration-150 ease-in-out">
+                            <a href="{{ route('apropos') }}" class="@if(Request::is('apropos')) nav-active @endif focus:text-yellow-700 border-b-2 border-transparent focus:border-yellow-700 flex px-5 items-center py-6  leading-5 text-gray-700 hover:bg-gray-100 focus:bg-gray-100 focus:outline-none transition duration-150 ease-in-out">
 
-                                Partenaires
+                                A propos
                             </a>
-                            <a href="{{ route('devis') }}" class="@if(Request::is('devis')) nav-active @endif focus:text-yellow-700 border-b-2 border-transparent focus:border-yellow-700 flex px-5 items-center py-6  leading-5 text-gray-700 hover:bg-gray-100 focus:bg-gray-100 focus:outline-none transition duration-150 ease-in-out">
+                            <a href="{{ route('contact') }}" class="@if(Request::is('contact')) nav-active @endif focus:text-yellow-700 border-b-2 border-transparent focus:border-yellow-700 flex px-5 items-center py-6  leading-5 text-gray-700 hover:bg-gray-100 focus:bg-gray-100 focus:outline-none transition duration-150 ease-in-out">
 
-                                Devis
+                                Contact
                             </a>
                         </div>
 
@@ -165,22 +165,22 @@
                                         </a>
                                     </li>
                                     <li>
-                                        <a class="cursor-pointer" href="{{ route('partenaires') }}">
+                                        <a class="cursor-pointer" href="{{ route('apropos') }}">
                                             <div class="text-gray-800 pt-8">
                                                 <div class="flex items-center">
 
-                                                    <p tabindex="0" class="@if(Request::is('partenaires')) nav-active-m @endif focus:outline-none focus:text-yellow-600 text-gray-800 xl:text-base md:text-2xl text-base ml-3">Partenaires</p>
+                                                    <p tabindex="0" class="@if(Request::is('apropos')) nav-active-m @endif focus:outline-none focus:text-yellow-600 text-gray-800 xl:text-base md:text-2xl text-base ml-3">A propos</p>
                                                 </div>
                                             </div>
                                         </a>
                                     </li>
                                     <li class="text-gray-800 pt-8 cursor-pointer">
-                                        <a class="cursor-pointer" href="{{ route('devis') }}">
+                                        <a class="cursor-pointer" href="{{ route('contact') }}">
 
                                         <div class="flex items-center justify-between">
                                             <div class="flex items-center">
 
-                                                <p tabindex="0" class="@if(Request::is('devis')) nav-active-m @endif focus:outline-none focus:text-yellow-600 text-gray-800 xl:text-base md:text-2xl text-base ml-3">Devis</p>
+                                                <p tabindex="0" class="@if(Request::is('contact')) nav-active-m @endif focus:outline-none focus:text-yellow-600 text-gray-800 xl:text-base md:text-2xl text-base ml-3">Contact</p>
                                             </div>
                                         </div>
                                     </a>
@@ -209,18 +209,19 @@
                 <div class="col-span-3">
                     <a href="#" ><img src="../img/logo.png" alt="Bulldozen" class="h-8"></a>
                     <p class="my-4 text-xs leading-normal text-gray-500">
-                        (petite description)
+                        BULLDOZEN répond à toutes vos demandes pour toutes les composantes de vos machines ; moteur, transmission, hydraulique, chaines et trains de roulement, pièces d’usure, mais également tout équipement d’exploitation de mines et/ou de carrières.
                     </p>
                 </div>
                 <nav class="col-span-1 md:col-span-1 lg:col-span-2">
                     <p class="mb-3 text-xs font-semibold tracking-wider text-gray-400 uppercase">Menu</p>
                     <a href="{{ route('index') }}" class="flex mb-3 text-sm font-medium text-gray-500 transition hover:text-gray-700 md:mb-2 hover:text-primary">Accueil</a>
                     <a href="{{ route('products') }}" class="flex mb-3 text-sm font-medium text-gray-500 transition hover:text-gray-700 md:mb-2 hover:text-primary">Produits</a>
-                    <a href="{{ route('devis') }}" class="flex mb-3 text-sm font-medium text-gray-500 transition hover:text-gray-700 md:mb-2 hover:text-primary">Demande de devis</a>
+                    <a href="{{ route('contact') }}" class="flex mb-3 text-sm font-medium text-gray-500 transition hover:text-gray-700 md:mb-2 hover:text-primary">Contact</a>
 
                 </nav>
                 <nav class="col-span-1 md:col-span-1 lg:col-span-2">
                     <p class="mb-3 text-xs font-semibold tracking-wider text-gray-400 uppercase">Suivez-nous</p>
+                    <a href="https://www.facebook.com/EURL.BULLDOZEN" class="flex mb-3 text-sm font-medium text-gray-500 transition hover:text-gray-700 md:mb-2 hover:text-primary" target="_blank">Facebook</a>
                 </nav>
 
                 <div class="col-span-3">
