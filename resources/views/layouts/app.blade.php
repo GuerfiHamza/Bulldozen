@@ -14,6 +14,16 @@
     <link rel="icon" type="image/png" href="../img/favicon.png"/>
     <meta name="description" content="{{config('site.desc')}}">
 
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-213555544-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-213555544-1');
+</script>
+
     <style>
         .nav-active {
             border-bottom: 2px solid rgb(217, 119, 6);
@@ -123,7 +133,7 @@
             <!--Mobile responsive sidebar-->
             <div class="absolute w-full h-full transform -translate-x-full z-40 xl:hidden" id="mobile-nav">
                 <div class="bg-gray-800 opacity-50 w-full h-full" onclick="sidebarHandler(false)"></div>
-                <div class="w-64 z-40 fixed overflow-y-auto z-40 top-0 bg-white shadow h-full flex-col justify-between xl:hidden pb-4 transition duration-150 ease-in-out">
+                <div class="w-64 z-40 fixed overflow-y-auto top-0 bg-white shadow h-full flex-col justify-between xl:hidden pb-4 transition duration-150 ease-in-out">
                     <div class="px-6 h-full">
                         <div class="flex flex-col justify-between h-full w-full">
                             <div>
@@ -238,7 +248,10 @@
         </div>
     </section>
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
-
+    <script
+    src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.3.5/dist/alpine.min.js"
+    defer
+  ></script>
     <script src="{{ asset('js/app.js') }}"></script>
     <script src="{{ asset('js/owl.carousel.min.js') }}"></script>
 @yield('scripts')

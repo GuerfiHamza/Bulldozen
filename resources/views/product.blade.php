@@ -32,7 +32,8 @@
         <div class="w-full md:w-1/2 px-4">
           <div class="lg:pl-20">
             <div class="mb-10 pb-10">
-              <span class="text-gray-500">{{ $product->brand }}</span>
+              <span class="text-gray-500">Marque: {{ $product->brand }}</span> -
+              <span class="text-gray-500">Référence: {{ $product->sku }}</span>
               <h2 class="mt-2 mb-6 max-w-xl text-5xl md:text-6xl font-bold font-heading">{{ $product->name }}</h2>
 
 

@@ -14,6 +14,8 @@ module.exports = {
         },
     },
     variants: {
+        backgroundClip: ['responsive'],
+
         extend: {},
     },
     plugins: [

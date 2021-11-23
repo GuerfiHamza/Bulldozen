@@ -5,3 +5,23 @@
 @font-face {
     font-family: 'Lato', sans-serif;
 }
+
+.clip-path-left-top {
+    clip-path: polygon(30% 0, 100% 0, 100% 100%, 0% 100%);
+}
+
+.sm\:clip-path-left-top {
+    clip-path: polygon(30% 0, 100% 0, 100% 100%, 0% 100%);
+}
+
+.md\:clip-path-left-top {
+    clip-path: polygon(30% 0, 100% 0, 100% 100%, 0% 100%);
+}
+
+.lg\:clip-path-left-top {
+    clip-path: polygon(30% 0, 100% 0, 100% 100%, 0% 100%);
+}
+
+.xl\:clip-path-left-top {
+    clip-path: polygon(30% 0, 100% 0, 100% 100%, 0% 100%);
+}

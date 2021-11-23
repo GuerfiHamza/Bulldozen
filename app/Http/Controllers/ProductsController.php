@@ -16,7 +16,7 @@ class ProductsController extends Controller
      */
      public function index()
     {
-        $pagination = 12;
+        $pagination = 6;
         $categories = Category::all();
 
         if (request()->category) {
@@ -25,19 +25,21 @@ class ProductsController extends Controller
             });
             $categoryName = optional($categories->where('slug', request()->category)->first())->name;
         } else {
-            $products = Product::where('active', true)->inRandomOrder();
+            $products = Product::where('active', true)->take($pagination);
             $categoryName = 'Boutique';
         }
 
-            $products = $products->paginate($pagination);
-
+        $products = $products->paginate($pagination);
+        $fournisseurs = \App\Models\Fournisseur::all();
+        $fournisseurs2 = \App\Models\Fournisseur2::all();
         $featured = Product::where('featured', 1);
         return view('products')->with([
             'products' => $products,
             'categories' => $categories,
             'categoryName' => $categoryName,
             'featured' => $featured,
-
+            'fournisseurs' => $fournisseurs,
+            'fournisseurs2' => $fournisseurs2
         ]);
      }
 
