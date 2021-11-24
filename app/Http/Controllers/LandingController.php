@@ -12,7 +12,6 @@ class LandingController extends Controller
         $categories = Category::All()->take(6);
         $products = \App\Models\Product::where('featured', true)->take(6)->get();
         $partenaires = \App\Models\Partenaires::all();
-        $banner = \App\Models\Banner::where('id', '1')->firstOrFail();
         $fournisseurs = \App\Models\Fournisseur::all();
         $fournisseurs2 = \App\Models\Fournisseur2::all();
         // dd($products);
@@ -20,7 +19,6 @@ class LandingController extends Controller
         'categories' => $categories,
         'products' => $products,
         'partenaires' => $partenaires,
-        'banner' => $banner,
         'fournisseurs' => $fournisseurs,
         'fournisseurs2' => $fournisseurs2
         ]);

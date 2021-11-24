@@ -16,7 +16,10 @@ module.exports = {
     variants: {
         backgroundClip: ['responsive'],
 
-        extend: {},
+        extend: {
+            ringColor: ['focus'],
+
+        },
     },
     plugins: [
         require('@tailwindcss/forms'),

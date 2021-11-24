@@ -87,7 +87,7 @@
       </section>
       <section class="py-20">
         <div class="container px-4 mx-auto">
-            <h1 class="sm:text-3xl text-2xl font-medium title-font mb-2 text-gray-900">Nos Categories</h1>
+            <h1 class="sm:text-3xl text-2xl font-medium title-font mb-2 text-gray-900">Nos Produits</h1>
             <div class="h-1 w-20 bg-yellow-500 rounded mb-5"></div>
             <div class="flex flex-wrap -mx-3 overflow-hidden sm:-mx-3 md:-mx-4 lg:-mx-4 xl:-mx-1">
                 @foreach ($products as $pr )
