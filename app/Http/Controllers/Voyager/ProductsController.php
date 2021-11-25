@@ -3,8 +3,6 @@
 namespace App\Http\Controllers\Voyager;
 
 use App\Models\Product;
-use App\Models\Category;
-use App\Models\CategoryProduct;
 use Illuminate\Http\Request;
 use TCG\Voyager\Facades\Voyager;
 use Illuminate\Support\Facades\DB;
@@ -155,12 +153,9 @@ class ProductsController extends VoyagerBaseController
             $view = "voyager::$slug.edit-add";
         }
 
-        $allCategories = Category::all();
-
         $product = Product::find($id);
-        $categoriesForProduct = $product->categories()->get();
 
-        return Voyager::view($view, compact('dataType', 'dataTypeContent', 'isModelTranslatable', 'allCategories', 'categoriesForProduct'));
+        return Voyager::view($view, compact('dataType', 'dataTypeContent', 'isModelTranslatable'));
     }
 
     // POST BR(E)AD
@@ -192,11 +187,6 @@ class ProductsController extends VoyagerBaseController
             $this->insertUpdateData($requestNew, $slug, $dataType->editRows, $data);
 
             event(new BreadDataUpdated($dataType, $data));
-
-            CategoryProduct::where('product_id', $id)->delete();
-
-            // Re-insert if there's at least one category checked
-            $this->updateProductCategories($request, $id);
 
             return redirect()
                 ->route("voyager.{$dataType->slug}.index")
@@ -250,10 +240,8 @@ class ProductsController extends VoyagerBaseController
             $view = "voyager::$slug.edit-add";
         }
 
-        $allCategories = Category::all();
-        $categoriesForProduct = collect([]);
 
-        return Voyager::view($view, compact('dataType', 'dataTypeContent', 'isModelTranslatable', 'allCategories', 'categoriesForProduct'));
+        return Voyager::view($view, compact('dataType', 'dataTypeContent', 'isModelTranslatable'));
     }
 
     /**
@@ -287,7 +275,6 @@ class ProductsController extends VoyagerBaseController
 
             event(new BreadDataAdded($dataType, $data));
 
-            $this->updateProductCategories($request, $data->id);
 
             return redirect()
                 ->route("voyager.{$dataType->slug}.index")
@@ -298,15 +285,5 @@ class ProductsController extends VoyagerBaseController
         }
     }
 
-    protected function updateProductCategories(Request $request, $id)
-    {
-        if ($request->category) {
-            foreach ($request->category as $category) {
-                CategoryProduct::create([
-                    'product_id' => $id,
-                    'category_id' => $category,
-                ]);
-            }
-        }
-    }
+
 }

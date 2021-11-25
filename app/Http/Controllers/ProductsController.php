@@ -17,17 +17,8 @@ class ProductsController extends Controller
      public function index()
     {
         $pagination = 6;
-        $categories = Category::all();
 
-        if (request()->category) {
-            $products = Product::with('categories')->whereHas('categories', function ($query) {
-                $query->where('slug', request()->category);
-            });
-            $categoryName = optional($categories->where('slug', request()->category)->first())->name;
-        } else {
-            $products = Product::where('active', true)->take($pagination);
-            $categoryName = 'Boutique';
-        }
+        $products = Product::where('active', true)->take($pagination);
 
         $products = $products->paginate($pagination);
         $fournisseurs = \App\Models\Fournisseur::all();
@@ -35,8 +26,6 @@ class ProductsController extends Controller
         $featured = Product::where('featured', 1);
         return view('products')->with([
             'products' => $products,
-            'categories' => $categories,
-            'categoryName' => $categoryName,
             'featured' => $featured,
             'fournisseurs' => $fournisseurs,
             'fournisseurs2' => $fournisseurs2
