@@ -35,7 +35,7 @@
         <div class="container px-4 mx-auto">
           <div class="relative flex flex-wrap items-center -mx-4">
             <div class="w-full lg:w-1/2 px-4 mb-12 lg:mb-0">
-              <img class="h-96 lg:h-128 w-full rounded-xl object-cover" src="/img/background.png" alt="">
+              <img class="h-96 lg:h-128 w-full rounded-xl object-cover bg-center" src="/img/bg.png" alt="">
             </div>
             <div class="relative w-full lg:w-1/2 px-4">
               <div class="relative lg:pl-10 max-w-lg">
@@ -47,7 +47,7 @@
           </div>
         </div>
       </section>
-    
+
       <section class="py-20">
         <div class="container px-4 mx-auto">
             <h1 class="sm:text-3xl text-2xl font-medium title-font mb-2 text-gray-900">Nos Produits</h1>
