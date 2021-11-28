@@ -16,9 +16,11 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', [App\Http\Controllers\LandingController::class, 'index'])->name('index');
 Route::get('/produits', [App\Http\Controllers\ProductsController::class, 'index'])->name('products');
-Route::get('/produits/{product}', [App\Http\Controllers\ProductsController::class, 'show'])->name('products.show');
+Route::get('/produit/{product}', [App\Http\Controllers\ProductsController::class, 'show'])->name('products.show');
 Route::get('/apropos', [App\Http\Controllers\AboutController::class, 'index'])->name('apropos');
 Route::get('/contact', [App\Http\Controllers\ContactController::class, 'index'])->name('contact');
+Route::post('/contact/envoyer', [App\Http\Controllers\ContactController::class, 'mailContactForm'])->name('mailContactForm');
+
 Route::group(['prefix' => 'admin'], function () {
     Voyager::routes();
 });

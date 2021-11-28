@@ -18,69 +18,27 @@ class ContactController extends Controller
         return view('contact');
     }
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
+    public function mailContactForm(Request $request)
     {
-        //
-    }
 
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \App\Http\Requests\StoreContactRequest  $request
-     * @return \Illuminate\Http\Response
-     */
-    public function store(StoreContactRequest $request)
-    {
-        //
-    }
+        $this->validate($request, [
+      'name'     =>  'required',
+      'subject'     =>  'required',
+      'tel'     =>  'required',
+      'email'  =>  'required|email',
+      'message' =>  'required'
+     ]);
+        $data = [
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  \App\Models\Contact  $contact
-     * @return \Illuminate\Http\Response
-     */
-    public function show(Contact $contact)
-    {
-        //
-    }
+        'name' => $request->get('name'),
+        'subject' => $request->get('subject'),
+        'tel' => $request->get('tel'),
+        'email' => $request->get('email'),
+        'message' => $request->get('message'),
+        ];
 
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  \App\Models\Contact  $contact
-     * @return \Illuminate\Http\Response
-     */
-    public function edit(Contact $contact)
-    {
-        //
-    }
+        \Mail::to(env('RECIPIENT_EMAIL'))->send(new \App\Mail\ContactMail($data));
 
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \App\Http\Requests\UpdateContactRequest  $request
-     * @param  \App\Models\Contact  $contact
-     * @return \Illuminate\Http\Response
-     */
-    public function update(UpdateContactRequest $request, Contact $contact)
-    {
-        //
-    }
-
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  \App\Models\Contact  $contact
-     * @return \Illuminate\Http\Response
-     */
-    public function destroy(Contact $contact)
-    {
-        //
+        return redirect()->back();
     }
 }
