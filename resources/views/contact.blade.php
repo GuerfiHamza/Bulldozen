@@ -79,24 +79,24 @@
 
           </div>
         <div>
-          <form>
+          <form action="{{ route('mailContactForm') }}" method="post">
 
             <div class="flex flex-wrap mb-4 -mx-3">
               <div class="w-full lg:w-1/2 px-3 mb-4 lg:mb-0">
                 <div class="mb-4">
-                  <input class="w-full p-4 text-xs font-semibold leading-none bg-gray-50 rounded outline-none" type="text" placeholder="Nom & Prénom">
+                  <input class="w-full p-4 text-xs font-semibold leading-none bg-gray-50 rounded outline-none" type="text" name="name" placeholder="Nom & Prénom">
                 </div>
                 <div class="mb-4">
-                  <input class="w-full p-4 text-xs font-semibold leading-none bg-gray-50 rounded outline-none" type="text" placeholder="Sujet">
+                  <input class="w-full p-4 text-xs font-semibold leading-none bg-gray-50 rounded outline-none" type="text" name="subject" placeholder="Sujet">
                 </div>
                 <div class="mb-4">
-                  <input class="w-full p-4 text-xs font-semibold leading-none bg-gray-50 rounded outline-none" type="email" placeholder="name@example.com">
+                  <input class="w-full p-4 text-xs font-semibold leading-none bg-gray-50 rounded outline-none" type="email" name="email" placeholder="name@example.com">
                 </div>
                 <div class="mb-4">
-                    <input class="w-full p-4 text-xs font-semibold leading-none bg-gray-50 rounded outline-none" type="tel" placeholder="Téléphone">
+                    <input class="w-full p-4 text-xs font-semibold leading-none bg-gray-50 rounded outline-none" type="tel" name="tel" placeholder="Téléphone">
                   </div>
               </div>
-              <div class="w-full lg:w-1/2 px-3"><textarea class="w-full h-full p-4 text-xs font-semibold leading-none resize-none bg-gray-50 rounded outline-none" type="text" placeholder="Message..."></textarea></div>
+              <div class="w-full lg:w-1/2 px-3"><textarea class="w-full h-full p-4 text-xs font-semibold leading-none resize-none bg-gray-50 rounded outline-none" type="text" name="message" placeholder="Message..."></textarea></div>
             </div>
             <div class="flex  items-center justify-end">
 
