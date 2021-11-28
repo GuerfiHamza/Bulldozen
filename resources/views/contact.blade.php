@@ -80,6 +80,7 @@
           </div>
         <div>
           <form action="{{ route('mailContactForm') }}" method="post">
+            @csrf
 
             <div class="flex flex-wrap mb-4 -mx-3">
               <div class="w-full lg:w-1/2 px-3 mb-4 lg:mb-0">
