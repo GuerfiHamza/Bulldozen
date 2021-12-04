@@ -116,7 +116,10 @@
                         </div><br />
                     @endif
                     @if(session('message'))
-                    {{session('message')}}
+                    <div class="bg-green-600 text-black px-3 py-2">
+                        {{session('message')}}
+
+                    </div>
                   @endif
                     <form action="{{ route('mailContactForm') }}" method="post">
                         @csrf
