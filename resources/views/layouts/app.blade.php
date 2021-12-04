@@ -26,7 +26,6 @@
 
   gtag('config', 'UA-213555544-1');
 </script>
-@toastr_css
     <style>
         .nav-active {
             border-bottom: 2px solid rgb(217, 119, 6);
@@ -258,8 +257,6 @@
   ></script>
     <script src="{{ asset('js/app.js') }}"></script>
     <script src="{{ asset('js/owl.carousel.min.js') }}"></script>
-    @toastr_js
-    @toastr_render
     @yield('scripts')
     <script>
 function dropdownHandler(element) {
