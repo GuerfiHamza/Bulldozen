@@ -244,7 +244,7 @@
                 </div>
             </div>
             <div class="flex flex-col items-start justify-between pt-10 mt-10 border-t border-gray-100 md:flex-row md:items-center">
-                <p class="mb-6 text-sm text-left text-gray-600 md:mb-0">© Copyright 2021 Bulldozen. Tous droit reservé.</p>
+                <p class="mb-6 text-sm text-left text-gray-600 md:mb-0">© Copyright 2021 Bulldozen. Tous droit reservé. This web site was designed by <a href="https://blackburn-co.com/" target="_blank">BlackburnBLACKBURN</a></p>
 
             </div>
         </div>
