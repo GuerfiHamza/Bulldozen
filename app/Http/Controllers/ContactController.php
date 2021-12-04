@@ -41,8 +41,8 @@ class ContactController extends Controller
         ];
 
         \Mail::to(env('RECIPIENT_EMAIL'))->send(new \App\Mail\ContactMail($data));
-        
-        return redirect()->back()->with('message','Votre message a était envoyée avec succès');
+
+        return redirect()->back()->with('message','Votre message a était envoyée avec succès.');
     }
     public function reloadCaptcha()
     {

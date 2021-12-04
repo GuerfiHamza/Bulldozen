@@ -116,7 +116,7 @@
                         </div><br />
                     @endif
                     @if(session('message'))
-                    <div class="bg-green-600 text-black px-3 py-2">
+                    <div class="bg-green-600 text-white px-3 py-2 mb-3">
                         {{session('message')}}
 
                     </div>
