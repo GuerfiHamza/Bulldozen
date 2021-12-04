@@ -107,8 +107,8 @@
                 </div>
                 <div>
                     @if ($errors->any())
-                        <div class="alert alert-danger">
-                            <ul>
+                    <div class="bg-red-600 text-white px-3 py-2 mb-3">
+                        <ul>
                                 @foreach ($errors->all() as $error)
                                     <li>{{ $error }}</li>
                                 @endforeach
