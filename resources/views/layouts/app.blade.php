@@ -95,7 +95,7 @@
                             <a href="{{ route('index') }}" class="@if(Request::is('/')) nav-active @endif focus:text-yellow-700 border-b-2 border-transparent focus:border-yellow-700 flex px-5 items-center py-6  leading-5 text-gray-700 hover:bg-gray-100 focus:bg-gray-100 focus:outline-none transition duration-150 ease-in-out">
                                 Accueil
                             </a>
-                            <a href="{{ route('products') }}" class="@if(Request::is('produits/*', 'produits')) nav-active @endif focus:text-yellow-700 border-b-2 border-transparent focus:border-yellow-700 flex px-5 items-center py-6  leading-5 text-gray-700 hover:bg-gray-100 focus:bg-gray-100 focus:outline-none transition duration-150 ease-in-out">
+                            <a href="{{ route('products') }}" class="@if(Request::is('produit/*', 'produits')) nav-active @endif focus:text-yellow-700 border-b-2 border-transparent focus:border-yellow-700 flex px-5 items-center py-6  leading-5 text-gray-700 hover:bg-gray-100 focus:bg-gray-100 focus:outline-none transition duration-150 ease-in-out">
 
                                 Produits
                             </a>
