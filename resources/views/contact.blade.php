@@ -115,7 +115,7 @@
                             </ul>
                         </div><br />
                     @endif
-                    @include('flash::message')
+                    <x-flash::message />
 
                     <form action="{{ route('mailContactForm') }}" method="post">
                         @csrf
