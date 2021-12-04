@@ -115,7 +115,9 @@
                             </ul>
                         </div><br />
                     @endif
-
+                    @if(session('message'))
+                    {{session('message')}}
+                  @endif
                     <form action="{{ route('mailContactForm') }}" method="post">
                         @csrf
 
@@ -193,24 +195,6 @@
         });
     </script>
 
-    <script>
-        @if (Session::has('message'))
-            toastr.options =
-            {
-            "closeButton" : true,
-            "progressBar" : true
-            }
-            toastr.success("{{ session('message') }}");
-        @endif
 
-        @if (Session::has('error'))
-            toastr.options =
-            {
-            "closeButton" : true,
-            "progressBar" : true
-            }
-            toastr.error("{{ session('error') }}");
-        @endif
-    </script>
 @endsection
 @stop
