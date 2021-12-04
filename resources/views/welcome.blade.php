@@ -21,17 +21,17 @@
 
     </section>
 
-    <div class="flex  flex-wrap items-center justify-center max-w-4xl mx-auto pt-12 pb-4">
+    <div class="flex  flex-wrap items-center justify-center max-w-7xl mx-auto pt-12 pb-4">
         @foreach ($fournisseurs as $fr)
 
-            <div class="w-1/2 md:w-1/3 lg:w-1/6 mb-8">
-                <img class="mx-auto w-16" src="{{ URL::asset('storage/' . $fr->logo) }} " alt="{{ $fr->logo }}">
+            <div class="w-1/2 md:w-1/3 lg:w-1/6 mb-8 px-8">
+                <img class="mx-auto w-28" src="{{ URL::asset('storage/' . $fr->logo) }} " alt="{{ $fr->logo }}">
             </div>
         @endforeach
 
     </div>
 
-    <section class="relative py-20">
+    <section class="relative py-5">
         <div class="container px-4 mx-auto">
           <div class="relative flex flex-wrap items-center -mx-4">
             <div class="w-full lg:w-1/2 px-4 mb-12 lg:mb-0">
@@ -48,7 +48,7 @@
         </div>
       </section>
 
-      <section class="py-20">
+      <section class="py-10">
         <div class="container px-4 mx-auto">
             <h1 class="sm:text-3xl text-2xl font-medium title-font mb-2 text-gray-900">Nos Produits</h1>
             <div class="h-1 w-20 bg-yellow-500 rounded mb-5"></div>
@@ -87,12 +87,12 @@
         </div>
       </section>
 
-    <section class="py-10">
-        <div class="flex  flex-wrap items-center justify-center max-w-4xl mx-auto pt-12 pb-4">
+    <section class="py-5">
+        <div class="flex  flex-wrap items-center justify-center max-w-7xl mx-auto pt-12 pb-4">
             @foreach ($fournisseurs2 as $fr)
 
-                <div class="w-1/2 md:w-1/3 lg:w-1/6 mb-8">
-                    <img class="mx-auto w-16" src="{{ URL::asset('storage/' . $fr->logo) }} " alt="{{ $fr->logo }}">
+                <div class="w-1/2 md:w-1/3 lg:w-1/6 mb-8 px-8">
+                    <img class="mx-auto w-28" src="{{ URL::asset('storage/' . $fr->logo) }} " alt="{{ $fr->logo }}">
                 </div>
             @endforeach
 

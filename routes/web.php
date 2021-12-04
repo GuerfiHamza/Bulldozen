@@ -20,6 +20,7 @@ Route::get('/produit/{product}', [App\Http\Controllers\ProductsController::class
 Route::get('/apropos', [App\Http\Controllers\AboutController::class, 'index'])->name('apropos');
 Route::get('/contact', [App\Http\Controllers\ContactController::class, 'index'])->name('contact');
 Route::post('/contact/envoyer', [App\Http\Controllers\ContactController::class, 'mailContactForm'])->name('mailContactForm');
+Route::get('/contact/reload-captcha', [App\Http\Controllers\ContactController::class, 'reloadCaptcha'])->name('reloadCaptcha');
 
 Route::group(['prefix' => 'admin'], function () {
     Voyager::routes();

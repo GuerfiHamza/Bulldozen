@@ -21,11 +21,11 @@
             </div>
         </div>
     </section>
-    <div class="flex  flex-wrap items-center justify-center max-w-4xl mx-auto pt-12 pb-4">
+    <div class="flex  flex-wrap items-center justify-center max-w-7xl mx-auto pt-12 pb-4">
         @foreach ($fournisseurs as $fr)
 
-            <div class="w-1/2 md:w-1/3 lg:w-1/6 mb-8">
-                <img class="mx-auto w-16" src="{{ URL::asset('storage/' . $fr->logo) }} " alt="{{ $fr->logo }}">
+            <div class="w-1/2 md:w-1/3 lg:w-1/6 mb-8 px-8">
+                <img class="mx-auto w-28" src="{{ URL::asset('storage/' . $fr->logo) }} " alt="{{ $fr->logo }}">
             </div>
         @endforeach
 
@@ -68,11 +68,11 @@
     </section>
 
     <section class="py-10">
-        <div class="flex  flex-wrap items-center justify-center max-w-4xl mx-auto pt-12 pb-4">
+        <div class="flex  flex-wrap items-center justify-center max-w-7xl mx-auto pt-12 pb-4">
             @foreach ($fournisseurs2 as $fr)
 
-                <div class="w-1/2 md:w-1/3 lg:w-1/6 mb-8">
-                    <img class="mx-auto w-16" src="{{ URL::asset('storage/' . $fr->logo) }} " alt="{{ $fr->logo }}">
+                <div class="w-1/2 md:w-1/3 lg:w-1/6 mb-8 px-8">
+                    <img class="mx-auto w-28" src="{{ URL::asset('storage/' . $fr->logo) }} " alt="{{ $fr->logo }}">
                 </div>
             @endforeach
 

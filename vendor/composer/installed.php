@@ -1,11 +1,11 @@
 <?php return array(
     'root' => array(
-        'pretty_version' => '1.0.0+no-version-set',
-        'version' => '1.0.0.0',
+        'pretty_version' => 'dev-main',
+        'version' => 'dev-main',
         'type' => 'project',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
-        'reference' => NULL,
+        'reference' => '9b5eb398ba04128f7737758724d7ea79d008cf82',
         'name' => 'laravel/laravel',
         'dev' => true,
     ),
@@ -467,12 +467,12 @@
             'dev_requirement' => false,
         ),
         'laravel/laravel' => array(
-            'pretty_version' => '1.0.0+no-version-set',
-            'version' => '1.0.0.0',
+            'pretty_version' => 'dev-main',
+            'version' => 'dev-main',
             'type' => 'project',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
-            'reference' => NULL,
+            'reference' => '9b5eb398ba04128f7737758724d7ea79d008cf82',
             'dev_requirement' => false,
         ),
         'laravel/sail' => array(
@@ -564,6 +564,15 @@
             'aliases' => array(),
             'reference' => 'e8ac3499af0ea5b440908e06cc0abe5898008b3c',
             'dev_requirement' => true,
+        ),
+        'mews/captcha' => array(
+            'pretty_version' => '3.2.6',
+            'version' => '3.2.6.0',
+            'type' => 'package',
+            'install_path' => __DIR__ . '/../mews/captcha',
+            'aliases' => array(),
+            'reference' => '42c1b320e4cad1f6ec9a395da36d7eda5b67d122',
+            'dev_requirement' => false,
         ),
         'mockery/mockery' => array(
             'pretty_version' => '1.4.4',

@@ -27,7 +27,9 @@ class ContactController extends Controller
       'subject'     =>  'required',
       'tel'     =>  'required',
       'email'  =>  'required|email',
-      'message' =>  'required'
+      'message' =>  'required',
+      'captcha' => 'required|captcha'
+
      ]);
         $data = [
 
@@ -42,4 +44,9 @@ class ContactController extends Controller
 
         return redirect()->back();
     }
+    public function reloadCaptcha()
+    {
+        return response()->json(['captcha'=> captcha_img()]);
+    }
+
 }

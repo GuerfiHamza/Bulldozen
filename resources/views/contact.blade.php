@@ -3,14 +3,22 @@
 @section('title', 'Contact')
 
 @section('content')
-
+<section class="py-10 ">
+    <div class="container mx-auto px-4">
+      <div class="flex flex-wrap items-center justify-center -mx-4">
+        <div class="w-full lg:w-1/2 px-4 order-1 lg:order-0">
+          <h2 class="mb-4 text-4xl md:text-5xl font-bold font-heading">Entrer en contact avec nous !</h2>
+          <p class="mb-8 text-gray-500 leading-loose">Nous serons heureux de vous entendre.</p>
+        </div>
+        <div class="w-full lg:w-1/2 px-4 order-0 lg:order-1 mb-8 lg:mb-0 ">
+          <img src="img/bgcon.png" class="rounded-xl bg-cover ">
+        </div>
+      </div>
+    </div>
+  </section>
 <section class="py-20">
     <div class="container px-4 mx-auto">
       <div class="max-w-2xl lg:max-w-3xl mx-auto">
-        <div class="mb-12 text-center">
-          <h2 class="text-4xl font-bold font-heading">Entrer en contact!</h2>
-          <p class="text-gray-400">Nous serons heureux de vous entendre</p>
-        </div>
         <div class="flex flex-wrap -mx-3 text-center">
             <div class="w-full lg:w-1/3 px-3 mb-12">
                 <svg class="mb-6 h-8 w-8 mx-auto text-yellow-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -29,7 +37,6 @@
             <div class="leading-relaxed">
               <span class="text-sm text-gray-400">Téléphone</span>
               <p>+213 661 820 560</p>
-              <p>+213 553 482 520 </p>
               <p>+213 664 18 18 44</p>
             </div>
           </div>
@@ -79,10 +86,19 @@
 
           </div>
         <div>
+            @if ($errors->any())
+        <div class="alert alert-danger">
+            <ul>
+                @foreach ($errors->all() as $error)
+                <li>{{ $error }}</li>
+                @endforeach
+            </ul>
+        </div><br />
+        @endif
           <form action="{{ route('mailContactForm') }}" method="post">
             @csrf
 
-            <div class="flex flex-wrap mb-4 -mx-3">
+            <div class="flex flex-wrap -mx-3">
               <div class="w-full lg:w-1/2 px-3 mb-4 lg:mb-0">
                 <div class="mb-4">
                   <input class="w-full p-4 text-xs font-semibold leading-none bg-gray-50 rounded outline-none" type="text" name="name" placeholder="Nom & Prénom">
@@ -96,10 +112,26 @@
                 <div class="mb-4">
                     <input class="w-full p-4 text-xs font-semibold leading-none bg-gray-50 rounded outline-none" type="tel" name="tel" placeholder="Téléphone">
                   </div>
+                  <div class="flex flex-wrap mb-4">
+                    <div class="captcha">
+                        <span>{!! captcha_img() !!}</span>
+
+                    </div>
+                    <div style="margin-left: 10px">
+                        <button type="button" id="reload">
+                            ↻
+                        </button>
+                    </div>
+                </div>
+                <div class="mb-4">
+                    <input class="w-full p-4 text-xs font-semibold leading-none bg-gray-50 rounded outline-none" type="text" name="captcha" placeholder="Enter Captcha">
+                  </div>
               </div>
               <div class="w-full lg:w-1/2 px-3"><textarea class="w-full h-full p-4 text-xs font-semibold leading-none resize-none bg-gray-50 rounded outline-none" type="text" name="message" placeholder="Message..."></textarea></div>
             </div>
-            <div class="flex  items-center justify-end">
+
+
+            <div class="flex mt-5 items-center justify-end">
 
               <button class="py-4 px-8 text-sm text-white font-semibold leading-none bg-yellow-600 hover:bg-yellow-700 rounded" type="submit">Envoyer</button>
             </div>
@@ -109,5 +141,18 @@
     </div>
   </section>
 
+@section('scripts')
+<script type="text/javascript">
+    $('#reload').click(function () {
+        $.ajax({
+            type: 'GET',
+            url: 'contact/reload-captcha',
+            success: function (data) {
+                $(".captcha span").html(data.captcha);
+            }
+        });
+    });
 
+</script>
+@endsection
 @stop
