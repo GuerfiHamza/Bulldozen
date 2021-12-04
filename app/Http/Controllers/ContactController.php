@@ -41,6 +41,7 @@ class ContactController extends Controller
         ];
 
         \Mail::to(env('RECIPIENT_EMAIL'))->send(new \App\Mail\ContactMail($data));
+        flash()->sent();
 
         return redirect()->back();
     }

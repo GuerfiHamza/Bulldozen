@@ -38,6 +38,7 @@ class ComposerStaticInit79630123f2088c17b20e5b833dab9650
         '4a1f389d6ce373bda9e57857d3b61c84' => __DIR__ . '/..' . '/barryvdh/laravel-debugbar/src/helpers.php',
         'ed962a97bd972bc82007176b647d4e36' => __DIR__ . '/..' . '/facade/ignition/src/helpers.php',
         '5e8fe2a5ffaded85af682684fe3bbf5a' => __DIR__ . '/..' . '/mews/captcha/src/helpers.php',
+        '1984bb092ba688ee1c287a2b513b6b4b' => __DIR__ . '/..' . '/josegus/laravel-flash/helpers/flash.php',
     );
 
     public static $prefixLengthsPsr4 = array (
@@ -134,6 +135,10 @@ class ComposerStaticInit79630123f2088c17b20e5b833dab9650
             'Laravel\\Sanctum\\' => 16,
             'Laravel\\Sail\\' => 13,
             'Larapack\\DoctrineSupport\\' => 25,
+        ),
+        'J' => 
+        array (
+            'JoseGus\\LaravelFlash\\' => 21,
         ),
         'I' => 
         array (
@@ -442,6 +447,10 @@ class ComposerStaticInit79630123f2088c17b20e5b833dab9650
         'Larapack\\DoctrineSupport\\' => 
         array (
             0 => __DIR__ . '/..' . '/larapack/doctrine-support/src',
+        ),
+        'JoseGus\\LaravelFlash\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/josegus/laravel-flash/src',
         ),
         'Intervention\\Image\\' => 
         array (
@@ -3327,6 +3336,8 @@ class ComposerStaticInit79630123f2088c17b20e5b833dab9650
         'Intervention\\Image\\Point' => __DIR__ . '/..' . '/intervention/image/src/Intervention/Image/Point.php',
         'Intervention\\Image\\Response' => __DIR__ . '/..' . '/intervention/image/src/Intervention/Image/Response.php',
         'Intervention\\Image\\Size' => __DIR__ . '/..' . '/intervention/image/src/Intervention/Image/Size.php',
+        'JoseGus\\LaravelFlash\\Flash' => __DIR__ . '/..' . '/josegus/laravel-flash/src/Flash.php',
+        'JoseGus\\LaravelFlash\\LaravelFlashServiceProvider' => __DIR__ . '/..' . '/josegus/laravel-flash/src/LaravelFlashServiceProvider.php',
         'JsonException' => __DIR__ . '/..' . '/symfony/polyfill-php73/Resources/stubs/JsonException.php',
         'Larapack\\DoctrineSupport\\Column' => __DIR__ . '/..' . '/larapack/doctrine-support/src/Column.php',
         'Larapack\\DoctrineSupport\\Connections\\MySqlConnection' => __DIR__ . '/..' . '/larapack/doctrine-support/src/Connections/MySqlConnection.php',
