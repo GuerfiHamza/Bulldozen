@@ -2740,8 +2740,6 @@ return array(
     'Intervention\\Image\\Point' => $vendorDir . '/intervention/image/src/Intervention/Image/Point.php',
     'Intervention\\Image\\Response' => $vendorDir . '/intervention/image/src/Intervention/Image/Response.php',
     'Intervention\\Image\\Size' => $vendorDir . '/intervention/image/src/Intervention/Image/Size.php',
-    'JoseGus\\LaravelFlash\\Flash' => $vendorDir . '/josegus/laravel-flash/src/Flash.php',
-    'JoseGus\\LaravelFlash\\LaravelFlashServiceProvider' => $vendorDir . '/josegus/laravel-flash/src/LaravelFlashServiceProvider.php',
     'JsonException' => $vendorDir . '/symfony/polyfill-php73/Resources/stubs/JsonException.php',
     'Larapack\\DoctrineSupport\\Column' => $vendorDir . '/larapack/doctrine-support/src/Column.php',
     'Larapack\\DoctrineSupport\\Connections\\MySqlConnection' => $vendorDir . '/larapack/doctrine-support/src/Connections/MySqlConnection.php',

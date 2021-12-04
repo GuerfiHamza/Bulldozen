@@ -5,7 +5,7 @@
         'type' => 'project',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
-        'reference' => 'ac300a43dbe567aa8960156d7902145a736e31af',
+        'reference' => '7ffca4b6f786c3c72c533e1389435c47fc1a4084',
         'name' => 'laravel/laravel',
         'dev' => true,
     ),
@@ -442,15 +442,6 @@
             'reference' => '9a8cc99d30415ec0b3f7649e1647d03a55698545',
             'dev_requirement' => false,
         ),
-        'josegus/laravel-flash' => array(
-            'pretty_version' => '1.2.0',
-            'version' => '1.2.0.0',
-            'type' => 'library',
-            'install_path' => __DIR__ . '/../josegus/laravel-flash',
-            'aliases' => array(),
-            'reference' => 'd5d25220e571655726b7c1460a43bc1dd920ec22',
-            'dev_requirement' => false,
-        ),
         'kodova/hamcrest-php' => array(
             'dev_requirement' => true,
             'replaced' => array(
@@ -481,7 +472,7 @@
             'type' => 'project',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
-            'reference' => 'ac300a43dbe567aa8960156d7902145a736e31af',
+            'reference' => '7ffca4b6f786c3c72c533e1389435c47fc1a4084',
             'dev_requirement' => false,
         ),
         'laravel/sail' => array(

@@ -37,5 +37,4 @@ return array(
     '4a1f389d6ce373bda9e57857d3b61c84' => $vendorDir . '/barryvdh/laravel-debugbar/src/helpers.php',
     'ed962a97bd972bc82007176b647d4e36' => $vendorDir . '/facade/ignition/src/helpers.php',
     '5e8fe2a5ffaded85af682684fe3bbf5a' => $vendorDir . '/mews/captcha/src/helpers.php',
-    '1984bb092ba688ee1c287a2b513b6b4b' => $vendorDir . '/josegus/laravel-flash/helpers/flash.php',
 );
