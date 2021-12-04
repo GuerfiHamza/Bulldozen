@@ -180,6 +180,7 @@
     </section>
 
 @section('scripts')
+
     <script type="text/javascript">
         $('#reload').click(function() {
             $.ajax({

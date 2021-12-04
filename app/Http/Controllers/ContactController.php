@@ -41,6 +41,7 @@ class ContactController extends Controller
         ];
 
         \Mail::to(env('RECIPIENT_EMAIL'))->send(new \App\Mail\ContactMail($data));
+        toastr()->success('Votre message a était envoyée avec succes', 'Miracle Max Says')
 
         return redirect()->back()->with('message','Votre message a était envoyée avec succès');
     }

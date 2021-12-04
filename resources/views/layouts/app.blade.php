@@ -26,7 +26,7 @@
 
   gtag('config', 'UA-213555544-1');
 </script>
-
+@toastr_css
     <style>
         .nav-active {
             border-bottom: 2px solid rgb(217, 119, 6);
@@ -251,7 +251,6 @@
         </div>
     </section>
     <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
 
     <script
     src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.3.5/dist/alpine.min.js"
@@ -259,7 +258,9 @@
   ></script>
     <script src="{{ asset('js/app.js') }}"></script>
     <script src="{{ asset('js/owl.carousel.min.js') }}"></script>
-@yield('scripts')
+    @toastr_js
+    @toastr_render
+    @yield('scripts')
     <script>
 function dropdownHandler(element) {
     let single = element.getElementsByTagName("ul")[0];
