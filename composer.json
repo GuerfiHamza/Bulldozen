@@ -12,6 +12,7 @@
         "laravel/sanctum": "^2.11",
         "laravel/tinker": "^2.5",
         "mews/captcha": "^3.2",
+        "spatie/laravel-sitemap": "^6.0",
         "tcg/voyager": "^1.5"
     },
     "require-dev": {

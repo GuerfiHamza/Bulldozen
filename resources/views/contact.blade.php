@@ -43,8 +43,8 @@
                         </svg>
                         <div class="leading-relaxed">
                             <span class="text-sm text-gray-400">Téléphone</span>
-                            <p>+213 661 820 560</p>
-                            <p>+213 664 18 18 44</p>
+                            <p>+213 770 30 50 27</p>
+                            <p>+213 770 30 50 37</p>
                         </div>
                     </div>
                     <div class="w-1/2 lg:w-1/3 px-3 mb-12">

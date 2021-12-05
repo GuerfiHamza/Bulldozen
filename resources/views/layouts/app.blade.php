@@ -11,7 +11,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <link rel="stylesheet" href="{{ asset('css/owl.carousel.min.css') }}">
-    <link rel="icon" type="image/png" href="../img/favicon.png"/>
+    <link rel="icon" href="../img/favicon.ico"/>
     <meta name="description" content="{{config('site.desc')}}">
     <link rel="stylesheet" type="text/css"
     href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
@@ -89,7 +89,7 @@
                     </div>
                     <a href="{{ route('index') }}" class="focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-yellow-700 rounded-md flex w-full sm:w-auto items-center sm:items-stretch justify-end sm:justify-start">
                         <div  class="flex items-center">
-                            <img src="/img/logo.png" alt="Bulldozen" class="h-10">
+                            <img src="/img/logo.png" alt="Bulldozen" class="h-14">
                         </div>
                     </a>
                     <div class="flex">
@@ -118,7 +118,7 @@
         <nav>
             <div class="py-4 px-6 w-full flex xl:hidden justify-between items-center bg-white fixed top-0 z-40">
                 <div aria-label="logo" role="img" tabindex="0" class="focus:outline-none w-24">
-                    <img src="/img/logo.png" alt="Bulldozen" class="h-10">
+                    <img src="/img/logo.png" alt="Bulldozen" class="h-14">
                 </div>
                 <div class="flex items-center">
 
@@ -142,7 +142,7 @@
                                 <div class="mt-6 flex w-full items-center justify-between">
                                     <div class="flex items-center justify-between w-full">
                                         <div class="flex items-center">
-                                            <img src="/img/logo.png" alt="Bulldozen" class="h-10">
+                                            <img src="/img/logo.png" alt="Bulldozen" class="h-14">
                                         </div>
                                         <button id="cross" aria-label="close menu" class="focus:outline-none focus:ring-2 rounded-md text-gray-800" onclick="sidebarHandler(false)">
                                             <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-x" width="24" height="24" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
