@@ -133,7 +133,7 @@
                 </div>
             </div>
             <!--Mobile responsive sidebar-->
-            <div class="absolute w-full h-full transform -translate-x-full z-40 xl:hidden" id="mobile-nav">
+            <div class="fixed w-full h-full transform -translate-x-full z-40 xl:hidden" id="mobile-nav">
                 <div class="bg-gray-800 opacity-50 w-full h-full" onclick="sidebarHandler(false)"></div>
                 <div class="w-64 z-40 fixed overflow-y-auto top-0 bg-white shadow h-full flex-col justify-between xl:hidden pb-4 transition duration-150 ease-in-out">
                     <div class="px-6 h-full">

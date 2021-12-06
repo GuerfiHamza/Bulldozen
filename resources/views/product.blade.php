@@ -32,12 +32,24 @@
         <div class="w-full md:w-1/2 px-4">
           <div class="lg:pl-20">
             <div class="mb-10 pb-10">
+
+              @if (!empty($product->brand))
               <span class="text-gray-500">Marque: {{ $product->brand }}</span> -
+              @else
+
+              @endif
+              @if (!empty($product->sku))
               <span class="text-gray-500">Référence: {{ $product->sku }}</span>
+              @else
+
+              @endif
               <h2 class="mt-2 mb-6 max-w-xl text-5xl md:text-6xl font-bold font-heading">{{ $product->name }}</h2>
 
-
+              @if (!empty($product->details))
               <p class="max-w-md text-gray-500 mb-5">{{ $product->details }}</p>
+              @else
+
+              @endif
                 <hr>
               <h3 class="mb-8 text-xl font-bold font-heading mt-5">Description</h3>
                 <p class="max-w-2xl text-gray-500">{{ $product->description }}</p>

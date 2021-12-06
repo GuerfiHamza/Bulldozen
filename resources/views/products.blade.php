@@ -3,7 +3,7 @@
 @section('title', 'Produits')
 @section('content')
 
-    <section class="relative py-12 ">
+    <section class="relative py-24 ">
         <div class="container px-4 mx-auto">
             <div class="relative flex flex-wrap items-center -mx-4">
                 <div class="relative w-full lg:w-1/2 px-4 mb-12 lg:mb-0">
