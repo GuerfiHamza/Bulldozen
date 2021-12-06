@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="{{ asset('css/owl.carousel.min.css') }}">
     <link rel="icon" href="../img/favicon.ico"/>
     <meta name="description" content="{{config('site.desc')}}">
+    <meta name="keywords" content="{{config('site.keywords')}}">
     <link rel="stylesheet" type="text/css"
     href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
 
