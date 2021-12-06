@@ -25,7 +25,7 @@
         @foreach ($fournisseurs as $fr)
 
             <div class="w-1/2 md:w-1/3 lg:w-1/6 mb-8 px-8">
-                <img class="mx-auto w-28" src="{{ URL::asset('storage/' . $fr->logo) }} " alt="{{ $fr->logo }}">
+                <img class="mx-auto" src="{{ URL::asset('storage/' . $fr->logo) }} " alt="{{ $fr->logo }}">
             </div>
         @endforeach
 
@@ -92,7 +92,7 @@
             @foreach ($fournisseurs2 as $fr)
 
                 <div class="w-1/2 md:w-1/3 lg:w-1/6 mb-8 px-8">
-                    <img class="mx-auto w-28" src="{{ URL::asset('storage/' . $fr->logo) }} " alt="{{ $fr->logo }}">
+                    <img class="mx-auto" src="{{ URL::asset('storage/' . $fr->logo) }} " alt="{{ $fr->logo }}">
                 </div>
             @endforeach
 

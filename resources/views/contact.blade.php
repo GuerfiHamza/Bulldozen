@@ -3,7 +3,7 @@
 @section('title', 'Contact')
 
 @section('content')
-    <section class="py-10 ">
+    <section class="py-10 mt-16 sm:mt-8">
         <div class="container mx-auto px-4">
             <div class="flex flex-wrap items-center justify-center -mx-4">
                 <div class="w-full lg:w-1/2 px-4 order-1 lg:order-0">
