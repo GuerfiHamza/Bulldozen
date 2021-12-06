@@ -5,7 +5,7 @@
 @section('content')
 <section class="relative py-20">
     <div class="relative container px-4 mx-auto">
-      <div class="flex flex-wrap -mx-4">
+      <div class="flex flex-wrap -mx-4 mt-5">
 
         <div class="relative w-full  lg:w-1/2 px-4">
           <img class="rounded-xl object-cover" src="{{ URL::asset('storage/' . $about->image) }}" alt="">
@@ -17,6 +17,5 @@
           </div>
       </div>
     </div>
-    <img class="hidden xl:block absolute top-0 right-0 mt-52" src="zeus-assets/icons/dots/yellow-dot-right-shield.svg" alt="">
   </section>
 @endsection

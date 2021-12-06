@@ -117,7 +117,7 @@
         </nav>
         <nav>
             <div class="py-4 px-6 w-full flex xl:hidden justify-between items-center bg-white fixed top-0 z-40">
-                <div aria-label="logo" role="img" tabindex="0" class="focus:outline-none w-24">
+                <div aria-label="logo" role="img" tabindex="0" class="focus:outline-none">
                     <img src="/img/logo.png" alt="Bulldozen" class="h-14">
                 </div>
                 <div class="flex items-center">

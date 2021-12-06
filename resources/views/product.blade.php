@@ -9,7 +9,7 @@
         <div class="w-full md:w-1/2 px-4 mb-8 md:mb-0">
           <div class="relative mb-10" style="height: 564px;" id="slider">
 
-            <img class="object-cover w-full h-full " id="featured" src="{{ URL::asset('storage/'.$product->image) }} " alt="">
+            <img class="object-contain w-full h-full " id="featured" src="{{ URL::asset('storage/'.$product->image) }} " alt="">
 
           </div>
           <div class="flex flex-wrap -mx-2">
