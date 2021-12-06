@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>BULLDOZEN - @yield('title')</title>
+    <title>{{ setting('site.title') }} - @yield('title')</title>
 
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
@@ -12,8 +12,8 @@
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <link rel="stylesheet" href="{{ asset('css/owl.carousel.min.css') }}">
     <link rel="icon" href="../img/favicon.ico"/>
-    <meta name="description" content="{{config('site.desc')}}">
-    <meta name="keywords" content="{{config('site.keywords')}}">
+    <meta name="description" content="{{ setting('site.desc') }}">
+    <meta name="keywords" content="{{ setting('site.keywords') }}">
     <link rel="stylesheet" type="text/css"
     href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
 
