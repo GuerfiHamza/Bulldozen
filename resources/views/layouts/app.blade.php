@@ -12,7 +12,7 @@
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <link rel="stylesheet" href="{{ asset('css/owl.carousel.min.css') }}">
     <link rel="icon" href="../img/favicon.ico"/>
-    <meta name="description" content="{{ setting('site.desc') }}">
+    <meta name="description" content="{{ setting('site.description') }}">
     <meta name="keywords" content="{{ setting('site.keywords') }}">
     <link rel="stylesheet" type="text/css"
     href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
