@@ -34,7 +34,7 @@
         <div class="container mx-auto px-4">
 
 
-            <div class="flex flex-wrap -mx-3 mb-24">
+            <div class="flex flex-wrap -mx-3 mb-5">
 
                     @foreach ($products as $product)
 
