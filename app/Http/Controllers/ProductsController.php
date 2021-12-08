@@ -16,7 +16,7 @@ class ProductsController extends Controller
      */
      public function index()
     {
-        $pagination = 6;
+        $pagination = 10;
 
         $products = Product::where('active', true)->take($pagination);
 

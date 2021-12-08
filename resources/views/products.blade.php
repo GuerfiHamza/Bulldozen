@@ -36,34 +36,25 @@
 
             <div class="flex flex-wrap -mx-3 mb-24">
 
-                <div class="w-full lg:w-3/4 px-3 mx-auto">
-                    <div class="flex flex-wrap -mx-3 ">
-                        @foreach ($products as $product)
-                            <div
-                                class="my-3 px-3 w-full overflow-hidden sm:my-3 sm:px-3 md:my-4 md:px-4 lg:my-4 lg:px-4 lg:w-1/3 xl:my-1 xl:px-1 xl:w-1/3">
+                    @foreach ($products as $product)
 
-                                <div class=" p-6 bg-white rounded-xl ">
-                                    <img class="w-64 object-contain rounded-md mx-auto"
-                                        src="{{ URL::asset('storage/' . $product->image) }}" alt="" />
-                                    <div class="mt-4">
-                                        <h1 class="text-2xl font-bold text-gray-700">{{ $product->name }}</h1>
-                                        <p class="text-sm mt-2 text-gray-700">
-                                            {{ Str::limit($product->description, 40, '...') }}</p>
+                        <div class="w-full md:w-1/2 lg:w-1/4 px-3 mb-6 lg:mb-2 min-h-96">
+                            <div class="p-6 ">
+                                <a class="block px-6 mt-6 mb-2" href="{{ route('products.show', $product->slug) }}">
+                                    <img class="mb-5 mx-auto h-56 w-full object-contain"
+                                        src="{{ URL::asset('storage/' . $product->image) }}" alt="{{ $product->name }}">
+                                    <h3 class="mb-2 text-xl font-bold font-heading">{{ $product->name }}</h3>
 
-                                        <div class="mt-4 mb-2 flex justify-between pl-4 pr-2">
-                                            <button class="block text-xl font-semibold text-gray-700 "></button>
-                                            <a href="{{ route('products.show', $product->slug) }}"
-                                                class="text-lg block font-semibold py-2 px-6 text-white hover:text-white bg-yellow-400 hover:bg-yellow-700 rounded-lg shadow hover:shadow-md transition duration-300">Visiter</a>
-                                        </div>
-                                    </div>
-                                </div>
+                                </a>
+
                             </div>
-                        @endforeach
+                        </div>
+                    @endforeach
 
-                    </div>
-                    {!! $products->appends(request()->input())->links('vendor.pagination.simple-tailwind') !!}
-                </div>
             </div>
+            {!! $products->appends(request()->input())->links('vendor.pagination.simple-tailwind') !!}
+
+        </div>
         </div>
     </section>
 
@@ -79,4 +70,6 @@
         </div>
 
     </section>
+
+
 @stop
