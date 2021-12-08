@@ -9,7 +9,7 @@ class LandingController extends Controller
     public function index()
     {
 
-        $products = \App\Models\Product::where('featured', true)->take(6)->get();
+        $products = \App\Models\Product::where('featured', true)->take(8)->get();
         $partenaires = \App\Models\Partenaires::all();
         $fournisseurs = \App\Models\Fournisseur::all();
         $fournisseurs2 = \App\Models\Fournisseur2::all();

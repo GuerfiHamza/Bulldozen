@@ -54,31 +54,16 @@
             <div class="h-1 w-20 bg-yellow-500 rounded mb-5"></div>
             <div class="flex flex-wrap -mx-3 overflow-hidden sm:-mx-3 md:-mx-4 lg:-mx-4 xl:-mx-1">
                 @foreach ($products as $pr )
-                <div class="my-3 px-3 w-full overflow-hidden sm:my-3 sm:px-3 md:my-4 md:px-4 lg:my-4 lg:px-4 lg:w-1/3 xl:my-1 xl:px-1 xl:w-1/3">
+                <div class="w-full md:w-1/2 lg:w-1/4 px-3 mb-6 lg:mb-2 min-h-96">
+                    <div class="p-6 ">
+                        <a class="block px-6 mt-6 mb-2" href="{{ route('products.show', $pr->slug) }}">
+                            <img class="mb-5 mx-auto h-56 w-full object-contain"
+                                src="{{ URL::asset('storage/' . $pr->image) }}" alt="{{ $pr->name }}">
+                            <h3 class="mb-2 text-xl font-bold font-heading">{{ $pr->name }}</h3>
 
-         <div class="bg-white shadow-md  rounded-3xl p-4 m-2">
-            <div class="flex-none lg:flex">
-                <div class=" h-full w-full lg:h-48 lg:w-48   lg:mb-0 mb-3">
-                    <img src="{{ URL::asset('storage/' . $pr->image) }}"
-                        alt="{{ $pr->name }}" class=" w-full  object-scale-down lg:object-cover  lg:h-48 rounded-2xl">
-                </div>
-                <div class="flex-auto ml-3 justify-evenly py-2">
-                    <div class="flex flex-wrap ">
+                        </a>
 
-                        <h2 class="flex-auto text-lg font-medium">{{ Str::limit($pr->name, 30, '...') }}</h2>
                     </div>
-                    <p class="mt-12"></p>
-                    <p class="text-gray-500 text-sm">{{ Str::limit($pr->description, 20, '...') }}</p>
-                    <div class="flex p-4 pb-2 border-t border-gray-200 "></div>
-                    <div class="flex space-x-3 text-sm font-medium justify-end">
-
-                        <a href="{{ route('products.show', $pr->slug) }}"
-                            class="mb-2 md:mb-0 bg-yellow-600 px-5 py-2 shadow-sm tracking-wider text-white rounded-full hover:bg-yellow-700"
-                            type="button" aria-label="like">Visiter</a>
-                    </div>
-                </div>
-            </div>
-        </div>
                 </div>
             @endforeach
 
