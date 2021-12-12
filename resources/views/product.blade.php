@@ -51,8 +51,13 @@
 
               @endif
                 <hr>
-              <h3 class="mb-8 text-xl font-bold font-heading mt-5">Description</h3>
+                @if (!empty($product->details))
+                <h3 class="mb-8 text-xl font-bold font-heading mt-5">Description</h3>
                 <p class="max-w-2xl text-gray-500">{!! $product->description !!}</p>
+                @else
+
+                @endif
+
             </div>
 
 
